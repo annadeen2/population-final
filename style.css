@@ -1,0 +1,191 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+/* This is what is called a reset. Different browsers have different default padding and margins. Using the * reserts all depault elements to have zero padding and margin. */
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+}
+
+/* Adds responsiveness to all images */
+.top {
+    max-width: 100%;
+}
+
+figure {
+    display: block;
+    text-align: left;
+    alignment: center;
+    margin: auto;
+    max-width: 100%;
+}
+
+.main_img {
+    padding-top: 20px;
+    display: block;
+    max-width: 750px;
+    margin: auto;
+}
+
+figcaption {
+    font-size: 14px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.credit {
+    color: gray;
+    font-size: 14;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500px;
+    text-align: center;
+    color: black;
+    border-radius: 4px;
+    padding-top: 10px;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100px;
+    font-style: italic;
+    margin-top: -10px;
+    text-align: right;
+    padding-right: 100px;
+    color: black;
+}
+
+h3 {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-weight: 300;
+    padding: 5px;
+    color: black;
+}
+
+h4 {
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100px;
+    font-style: italic;
+    text-align: center;
+    color: black;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+/*
+ * Cleaned up figure styles so that you had better control over image sizing throughout the page
+ */
+.text {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal
+}
+
+.graph {
+    max-width: 650px;
+    padding-left: 50px;
+    padding-right: 300px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    justify-content: center;
+    margin: auto;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    padding: 5px;
+    /* Added a max-width so that this one style block works on all devices */
+    /* Margin to center the container when it's not the full width */
+    margin: 0 auto;
+    max-width: 850px;
+    alignment: center;
+}
+
+.source_class {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    text-decoration: none;
+    alignment: center;
+}
+
+.source a {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+.source a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.source a:active {
+    color: #EE0000;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    /* Since you seem to want the flex elements to stack as normal on mobile, I just didn't define the flex
+     * styles until tablet. Less code that way
+     */
+    /*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+    @media(min-width: 780px) {
+
+        /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+        .text {
+            max-width: 850px;
+            margin: auto;
+            padding-bottom: 10px;
+        }
+
+        .top {
+            max-width: 800px;
+            margin: auto;
+            padding-top: 10px;
+        }
+
+        .source_class {}
+    }
+
+    /
